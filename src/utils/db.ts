@@ -2,9 +2,7 @@ import mongoose from "mongoose";
 import {logger} from "./logger";
 
 const MONGODB_URI = 
-process.env.MONGODB_URI || 
-"mongodb+srv://ahmedmubarak097:DpJGpQlSQtB4GYmj@ai-therapist-agent.3whcxov.mongodb.net/?retryWrites=true&w=majority&appName=ai-therapist-agent"
-
+process.env.MONGODB_URI;
 // Migration function to add topic field to existing sessions
 const runTopicFieldMigration = async () => {
   try {
